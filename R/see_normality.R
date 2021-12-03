@@ -11,6 +11,13 @@
 #'
 see_normality <- function(variable, label){
 
+  # verify_1 <- (variable)
+  # verify_2 <- length(label)
+  #
+  # if(verify_1 == 0){
+  #   stop("Preencha os argumentosl")
+  #
+  # }
   value <- variable
   banco <- tibble::tibble(value)
 
@@ -78,7 +85,8 @@ see_normality <- function(variable, label){
                   tag = "C")
 
 
-  g1 + g2 + g3
+  # g1 + g2 + g3
 
+  patchwork::wrap_plots(list(g1, g2, g3))
 
 }

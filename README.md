@@ -24,4 +24,8 @@ devtools::install_github("denis-or/catoper")
 
 ## Example
 
-No examples! =X
+``` r
+catoper::see_normality(variable = rnorm(150), label = "Variavel")
+```
+
+![](man/figures/figure_1.png)

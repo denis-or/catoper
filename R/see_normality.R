@@ -6,7 +6,7 @@
 #' @return a beautiful plot
 #' @export
 #'
-#' @examples
+#' @examples catoper::see_normality(rnorm(150))
 #'
 #'
 see_normality <- function(variable, label){

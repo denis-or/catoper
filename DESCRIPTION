@@ -22,4 +22,10 @@ Imports:
     stats,
     xml2,
     dplyr,
-    usethis
+    usethis,
+    purrr,
+    rvest,
+    stringr,
+    stringi,
+    httr,
+    janitor

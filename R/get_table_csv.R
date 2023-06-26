@@ -8,7 +8,7 @@
 #' @return a csv
 #'
 #' @examples
-pega_dados <- function(...) {
+get_table_csv <- function(...) {
   args <- list(...)
 
   args.df <- tibble::tibble(

@@ -7,16 +7,9 @@ Check the normality of the data
 #'
 #' @examples catoper::see_normality(rnorm(150))
 #'
-#'
+
 see_normality <- function(variable, label){
 
-  # verify_1 <- (variable)
-  # verify_2 <- length(label)
-  #
-  # if(verify_1 == 0){
-  #   stop("Preencha os argumentosl")
-  #
-  # }
   value <- variable
   banco <- tibble::tibble(value)
 

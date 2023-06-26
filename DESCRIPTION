@@ -19,4 +19,7 @@ Imports:
     tibble,
     patchwork,
     graphics,
-    stats
+    stats,
+    xml2,
+    dplyr,
+    usethis

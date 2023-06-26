@@ -1,4 +1,4 @@
-Check the normality of the data
+#' Check the normality of the data
 #'
 #' @param variable vector or variable with the data to check
 #' @param label label to plots

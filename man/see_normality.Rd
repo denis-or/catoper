@@ -2,18 +2,29 @@
 % Please edit documentation in R/see_normality.R
 \name{see_normality}
 \alias{see_normality}
-\title{Check the normality of the data}
+\title{Análise Visual de Normalidade de uma Variável}
 \usage{
 see_normality(variable, label)
 }
 \arguments{
-\item{variable}{vector or variable with the data to check}
+\item{variable}{Um vetor numérico contendo os dados da variável a ser analisada.}
 
-\item{label}{label to plots}
+\item{label}{Uma string que será usada como rótulo nos eixos dos gráficos.}
 }
 \value{
-a beautiful plot
+Uma combinação de três gráficos (histograma com densidade, boxplot e QQ plot).
 }
 \description{
-Check the normality of the data
+Esta função gera três gráficos para a análise de normalidade de uma variável:
+um histograma com sobreposição da curva de densidade, um boxplot, e um gráfico QQ.
+Utiliza o teste de Shapiro-Wilk para avaliar a normalidade.
+}
+\examples{
+\dontrun{
+# Exemplo de uso
+dados <- rnorm(100, mean = 0, sd = 1) # Gerar dados aleatórios
+see_normality(dados, "Exemplo de Variável")
+}
+
+
 }

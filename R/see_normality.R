@@ -1,14 +1,31 @@
-#' Check the normality of the data
+#' Análise Visual de Normalidade de uma Variável
 #'
-#' @param variable vector or variable with the data to check
-#' @param label label to plots
+#' Esta função gera três gráficos para a análise de normalidade de uma variável:
+#' um histograma com sobreposição da curva de densidade, um boxplot, e um gráfico QQ.
+#' Utiliza o teste de Shapiro-Wilk para avaliar a normalidade.
 #'
-#' @return a beautiful plot
+#' @param variable Um vetor numérico contendo os dados da variável a ser analisada.
+#' @param label Uma string que será usada como rótulo nos eixos dos gráficos.
 #'
-#' @examples catoper::see_normality(rnorm(150))
+#' @return Uma combinação de três gráficos (histograma com densidade, boxplot e QQ plot).
 #'
-
-see_normality <- function(variable, label){
+#' @examples
+#' \dontrun{
+#' # Exemplo de uso
+#' dados <- rnorm(100, mean = 0, sd = 1) # Gerar dados aleatórios
+#' see_normality(dados, "Exemplo de Variável")
+#' }
+#'
+#'
+#' @export
+#' @importFrom tibble tibble
+#' @importFrom stats shapiro.test
+#' @importFrom stats density
+#' @importFrom graphics hist
+#' @importFrom ggplot2 ggplot geom_histogram geom_line scale_y_continuous sec_axis
+#' @importFrom ggplot2 labs geom_boxplot geom_qq stat_qq stat_qq_line
+#' @importFrom patchwork wrap_plots
+see_normality <- function(variable, label) {
 
   value <- variable
   banco <- tibble::tibble(value)

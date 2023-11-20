@@ -1,0 +1,137 @@
+---
+title: "Lista de eventos"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{event_list}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Lista de eventos disponíveis no pacote
+
+O pacote conta com 56 módulos para utilizar. Abaixo listamos os eventos e os respectivos endereços no site do Datasus.
+
+------------------------------------------------------------------------
+
+**Observação:**
+
+*Recomendamos fortemente que os endereços abaixo sejam consultados antes do uso do pacote, pois os nomes dos argumentos devem ser idênticos ao formulário do Tabnet.*
+
+------------------------------------------------------------------------
+
+[Acidente de Trabalho](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/acgrbr.def)
+
+[Acidente por Animais Peçonhentos](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/animaisbr.def)
+
+[Acidente de trabalho com exposição a material biológico](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/acbibr.def)
+
+[Botulismo](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/botubr.def)
+
+[Câncer Relacionado ao Trabalho](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/cancbr.def)
+
+[Cólera](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/colerabr.def)
+
+[Coqueluche](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/coquebr.def)
+
+[Dermatose Relacionada ao Trabalho](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/dermbr.def)
+
+[Dengue até 2013](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/denguebr.def)
+
+[Dengue de 2014 em diante](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/denguebbr.def)
+
+[Difteria](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/difteribr.def)
+
+[Doença de Chagas Aguda](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/chagasbr.def)
+
+[Doenças Exantemáticas](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/exantbr.def)
+
+[Esquistossomose](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/esquistobr.def)
+
+[Febre de Chikungunya](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/chikunbr.def)
+
+[Febre Maculosa](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/febremaculosabr.def)
+
+[Febre Tifóide](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/febretifoidebr.def)
+
+[Hanseníase](http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sinannet/cnv/hanswbr.def)
+
+[Hantavirose](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/hantabr.def)
+
+[Hepatite](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/hepabr.def)
+
+[AIDS](http://www2.aids.gov.br/cgi/deftohtm.exe?tabnet/br.def)
+
+[Influenza Pandêmica](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/influbr.def)
+
+[Intoxicação Exógena](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/Intoxbr.def)
+
+[Leishmaniose Visceral](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/leishvbr.def)
+
+[Leishmaniose Tegumentar Americana](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/ltabr.def)
+
+[Leptospirose](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/leptobr.def)
+
+[Ler/Dort](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/lerdorbr.def)
+
+[Malária](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/malabr.def)
+
+[Meningite](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/meninbr.def)
+
+[Paralisia Flácida Aguda](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/pfabr.def)
+
+[PAIR Relacionado ao Trabalho](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/pairbr.def)
+
+[Peste](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/pestebr.def)
+
+[Pneumoconiose Relacionada ao Trabalho](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/pneubr.def)
+
+[Raiva Humana](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/raivabr.def)
+
+[Sífilis Adquirida](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/sifilisadquiridabr.def)
+
+[Sífilis Congênita](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/sifilisbr.def)
+
+[Sífilis em Gestante](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/sifilisgestantebr.def)
+
+[Síndrome da Rubéola Congênita](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/srubeolacbr.def)
+
+[Tétano Acidental](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/tetacidbr.def)
+
+[Tétano Neonatal](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/tetneobr.def)
+
+[Transtorno Mental Relacionado ao Trabalho](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/transmentalbr.def)
+
+[Violência interpessoal / autoprovocada](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/violebr.def)
+
+[Zika Vírus](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/zikabr.def)
+
+[Nascimento](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinasc/cnv/nvbr.def)
+
+[Óbito](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sim/cnv/obt10br.def)
+
+[Nascimento (dados preliminares)](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinasc/cnv/pnvbr.def)
+
+[Óbito (dados preliminares)](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sim/cnv/pobt10br.def)
+
+[População (estudo de estimativas)](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sim/cnv/pobt10br.def)
+
+[População (TCU)](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?ibge/cnv/poptbr.def)
+
+[Imunização Doses Aplicadas](http://tabnet.datasus.gov.br/cgi/dhdat.exe?bd_pni/dpnibr.def)
+
+[Imunização Cobertura](http://tabnet.datasus.gov.br/cgi/dhdat.exe?bd_pni/cpnibr.def)
+
+[Produção ambulatorial](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sia/cnv/qbbr.def)
+
+[Produção hospitalar](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sih/cnv/qrbr.def)
+
+[Morbidade hospitalar a partir de 2008](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sih/cnv/nruf.def)
+
+[Tuberculose](http://tabnet.datasus.gov.br/cgi/tabcgi.exe?sinannet/cnv/tubercbr.def)

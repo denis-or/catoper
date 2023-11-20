@@ -17,7 +17,6 @@
 #' # build_form_data(args_processados, base)
 #'
 #' }
-#' @export
 #' @importFrom stringr str_c
 #' @importFrom purrr pmap_chr
 #' @importFrom stringi stri_escape_unicode

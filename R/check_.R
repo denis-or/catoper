@@ -18,7 +18,6 @@
 #' # check_("argumento_exemplo", "valor_exemplo", base_toda)
 #'
 #' }
-#' @export
 #' @importFrom dplyr filter select rename
 #' @importFrom stringi stri_unescape_unicode
 #' @importFrom usethis ui_stop

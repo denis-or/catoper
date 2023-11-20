@@ -17,7 +17,6 @@
 #' # base_toda_y <- create_base_toda(page_x)
 #'
 #' }
-#' @export
 #' @importFrom rvest html_elements html_attr html_text
 #' @importFrom purrr map_dfr pluck
 #' @importFrom tibble tibble

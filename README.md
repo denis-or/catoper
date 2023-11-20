@@ -22,16 +22,20 @@ devtools::install_github("denis-or/catoper")
 
 ## Main Functions
 
-get_event(): This function is used to read the Tabnet specific health
-event input form in Datasus. It performs several steps, including input
-validation, reading metadata, filtering data based on the chosen event.
-The list of events is standardized and can be found at .
+- `get_event()`: This function is used to read the Tabnet specific
+  health event input form in Datasus. It performs several steps,
+  including input validation, reading metadata, filtering data based on
+  the chosen event. The list of events is standardized and can be found
+  at .
 
-pega_dados(): This function coordinates several steps to obtain data. It
-recreates the Tabnet data form, processes arguments and makes a request
-to obtain the desired data, returning a semi-structured `dataframe`.
+- `pega_dados()`: This function coordinates several steps to obtain
+  data. It recreates the Tabnet data form, processes arguments and makes
+  a request to obtain the desired data, returning a semi-structured
+  `dataframe`.
 
 ## Usage
+
+Principal
 
 ``` r
 library(catoper)
@@ -52,9 +56,17 @@ tabela_D1 <- pega_dados(
 )
 ```
 
+Other use
+
+``` r
+# Normality plots
+
+see_normality(rnorm(100, mean = 0, sd = 1), "Example")
+```
+
+![](man/figures/figure_1.png)
+
 ## License
 
 This package is available under the MIT License. See the LICENSE file
 for more details.
-
-![](man/figures/figure_1.png)

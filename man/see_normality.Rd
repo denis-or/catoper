@@ -17,7 +17,7 @@ Uma combinação de três gráficos (histograma com densidade, boxplot e QQ plot
 \description{
 Esta função gera três gráficos para a análise de normalidade de uma variável:
 um histograma com sobreposição da curva de densidade, um boxplot, e um gráfico QQ.
-Utiliza o teste de Shapiro-Wilk para avaliar a normalidade.
+Utiliza o teste de \code{Shapiro-Wilk} para avaliar a normalidade.
 }
 \examples{
 \dontrun{

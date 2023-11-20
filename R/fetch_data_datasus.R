@@ -21,7 +21,6 @@
 #' # fetch_data_datasus(form_data, base_exemplo, linha_argumento)
 #'
 #' }
-#' @export
 #' @importFrom httr POST add_headers content config
 #' @importFrom rvest html_element
 #' @importFrom xml2 xml_attr

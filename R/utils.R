@@ -20,7 +20,6 @@
 #' replace_char("Olá, Mundo!")
 #' replace_char("Exemplo com # e @.")
 #' }
-#' @export
 replace_char <- function(string) {
   # Mapeamento de caracteres especiais para seus códigos percentuais
   caracteres_especiais <-
@@ -98,7 +97,6 @@ replace_char <- function(string) {
 #' }
 #' @importFrom cli cli_progress_bar cli_progress_update
 #' @importFrom stringi stri_unescape_unicode
-#' @export
 #'
 show_progress <- function(msg, time_div) {
   cli::cli_progress_bar(stringi::stri_unescape_unicode(msg), total = 100, clear = FALSE)

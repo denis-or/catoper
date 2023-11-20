@@ -2,7 +2,7 @@
 #'
 #' Esta função gera três gráficos para a análise de normalidade de uma variável:
 #' um histograma com sobreposição da curva de densidade, um boxplot, e um gráfico QQ.
-#' Utiliza o teste de Shapiro-Wilk para avaliar a normalidade.
+#' Utiliza o teste de `Shapiro-Wilk` para avaliar a normalidade.
 #'
 #' @param variable Um vetor numérico contendo os dados da variável a ser analisada.
 #' @param label Uma string que será usada como rótulo nos eixos dos gráficos.

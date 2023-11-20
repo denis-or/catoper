@@ -26,12 +26,12 @@
 #'             - Incremento;
 #'             - Períodos disponíveis.
 #'            A depender de cada evento, esses nomes podem ser alterados e até
-#'            ampliados. Consulte a lista disponível em \code{\link{vignettes/event_list.rmd}}
-#'            e veja o exemplo abaixo.
+#'            ampliados. Veja o exemplo abaixo.
 #'
-#' @return Retorna uma `tibble` contendo os dados obtidos após processar todas as etapas.
+#' @return
+#' Retorna uma `tibble` contendo os dados obtidos após processar todas as etapas.
 #'
-#' @seealso Para mais exemplos, veja \code{\link{vignettes/event_list}}
+#'
 #'
 #' @examples
 #' \dontrun{

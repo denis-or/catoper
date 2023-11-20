@@ -16,8 +16,7 @@ os seguintes argumentos:
 - Incremento;
 - Períodos disponíveis.
 A depender de cada evento, esses nomes podem ser alterados e até
-ampliados. Consulte a lista disponível em \code{\link{vignettes/event_list.rmd}}
-e veja o exemplo abaixo.}
+ampliados. Veja o exemplo abaixo.}
 }
 \value{
 Retorna uma \code{tibble} contendo os dados obtidos após processar todas as etapas.
@@ -56,9 +55,6 @@ tabela_D1 <- pega_dados(
 # A tabela_D1 agora contém os dados processados de doses aplicadas de
 # 1ª dose de polio (VIP) em 2023 nos municípios do Rio de Janeiro
 
-}
-\seealso{
-Para mais exemplos, veja \code{\link{vignettes/event_list}}
 }
 \author{
 Denis Rodrigues \email{catoper@gmail.com}

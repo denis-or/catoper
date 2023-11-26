@@ -14,11 +14,10 @@ Deve ser uma string não vazia.}
 Uma lista contendo a página HTML lida e os metadados filtrados para o evento.
 }
 \description{
-Esta função é usada para leitura do formulário de entrada de evento
-específico de saúde do Tabnet, no Datasus. Ela realiza várias etapas,
-incluindo validação de entrada, leitura de metadados, filtragem de dados
-baseados no evento escolhido. A lista de eventos é padronizada e pode
-ser encontrada \href{vignettes/event_list.rmd}{neste link}.
+Esta função é usada para leitura do formulário para tabulação de dados
+de evento de saúde do Tabnet, no Datasus. Ela realiza o download do html
+do formulário do Tabnet para que os argumentos sejam validados.
+A lista de eventos é padronizada e pode ser encontrada \href{vignettes/event_list.rmd}{neste link}.
 }
 \details{
 IMPORTANT:

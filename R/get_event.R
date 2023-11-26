@@ -5,11 +5,10 @@
 #' Gerar formulário necessário para conexão com o Tabnet do Datasus
 #'
 #' @description
-#' Esta função é usada para leitura do formulário de entrada de evento
-#' específico de saúde do Tabnet, no Datasus. Ela realiza várias etapas,
-#' incluindo validação de entrada, leitura de metadados, filtragem de dados
-#' baseados no evento escolhido. A lista de eventos é padronizada e pode
-#' ser encontrada [neste link](vignettes/event_list.rmd).
+#' Esta função é usada para leitura do formulário para tabulação de dados
+#' de evento de saúde do Tabnet, no Datasus. Ela realiza o download do html
+#' do formulário do Tabnet para que os argumentos sejam validados.
+#' A lista de eventos é padronizada e pode ser encontrada [neste link](vignettes/event_list.rmd).
 #'
 #' @details
 #' IMPORTANT:
@@ -37,33 +36,33 @@ get_event <- function(event) {
 
   show_progress("1. Baixando e processando dados", 2)
 
-  # Validação de disease
+  # Validação do evento
   if (!is.character(event) || nchar(event) == 0) {
-    usethis::ui_stop(paste0("O argumento 'event' deve ser uma string n\\u00e3o vazia."))
+    usethis::ui_stop(stringi::stri_unescape_unicode(paste0("O argumento 'event' deve ser uma string n\\u00e3o vazia.")))
   }
 
   # Carrega metadados
 
   metadata_path <- "R/sysdata.rda"
-  if (!file.exists(metadata_path)) {
-    usethis::ui_stop(paste0("Arquivo de metadados n\\u00e3o encontrado: ", metadata_path))
-  }
+  # if (!file.exists(metadata_path)) {
+  #   usethis::ui_stop(stringi::stri_unescape_unicode(paste0("Arquivo de metadados n\\u00e3o encontrado: ", metadata_path)))
+  # }
 
-  load("R/sysdata.rda")
+  load(metadata_path)
 
   show_progress("2. Carregando metadados", 2)
 
   # Filtra para a doença especificada
   base_meta <- dplyr::filter(metadata, event_to_check == event)
   if (nrow(base_meta) == 0) {
-    usethis::ui_stop(paste0("Evento n\\u00e3o encontrado: ", event))
+    usethis::ui_stop(stringi::stri_unescape_unicode(paste0("Evento n\\u00e3o encontrado: ", event)))
   }
 
   # Lê a página HTML com tryCatch
   page <- tryCatch({
     xml2::read_html(base_meta$url_form)
   }, error = \(e) {
-    usethis::ui_stop(paste0("Falha ao ler a p\\u00e1gina HTML: ", e$message))
+    usethis::ui_stop(stringi::stri_unescape_unicode(paste0("Falha ao ler a p\\u00e1gina HTML: ", e$message)))
   })
 
   show_progress("3. Finalizando", 4)

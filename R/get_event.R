@@ -37,18 +37,18 @@ get_event <- function(event) {
   show_progress("1. Baixando e processando dados", 2)
 
   # Validação do evento
-  if (!is.character(event) || nchar(event) == 0) {
+  if (!is.character(event) || nchar(event) == 0 || is.na(event) || is.null(event)) {
     usethis::ui_stop(stringi::stri_unescape_unicode(paste0("O argumento 'event' deve ser uma string n\\u00e3o vazia.")))
   }
 
   # Carrega metadados
 
-  metadata_path <- "R/sysdata.rda"
+  # metadata_path <- "R/sysdata.rda"
   # if (!file.exists(metadata_path)) {
   #   usethis::ui_stop(stringi::stri_unescape_unicode(paste0("Arquivo de metadados n\\u00e3o encontrado: ", metadata_path)))
   # }
 
-  load(metadata_path)
+  # load(metadata_path)
 
   show_progress("2. Carregando metadados", 2)
 

@@ -13,6 +13,10 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
+```{r setup, echo=FALSE}
+library(catoper)
+```
+
 
 O pacote utiliza 56 formulários para retornar metadados para uso. Abaixo listamos os eventos e os respectivos endereços dos formulários no site do Datasus.
 
@@ -25,7 +29,7 @@ O pacote utiliza 56 formulários para retornar metadados para uso. Abaixo listam
 ------------------------------------------------------------------------
 
 | Nome do evento                                          | Endereço                                                                            |
-|---------------------|---------------------------------------------------|
+|----------------------|--------------------------------------------------|
 | Acidente de Trabalho                                    | <http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/acgrbr.def>             |
 | Acidente por Animais Peçonhentos                        | <http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/animaisbr.def>          |
 | Acidente de trabalho com exposição a material biológico | <http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinannet/cnv/acbibr.def>             |

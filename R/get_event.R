@@ -8,7 +8,7 @@
 #' Esta função é usada para leitura do formulário para tabulação de dados
 #' de evento de saúde do Tabnet, no Datasus. Ela realiza o download do html
 #' do formulário do Tabnet para que os argumentos sejam validados.
-#' A lista de eventos é padronizada e pode ser encontrada [neste link](vignettes/event_list.rmd).
+#' A lista de eventos é padronizada e pode ser encontrada [neste link](doc/event_list.html).
 #'
 #' @details
 #' IMPORTANT:

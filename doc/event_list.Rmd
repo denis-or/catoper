@@ -2,7 +2,7 @@
 title: "Lista de eventos disponíveis no pacote"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{event_list}
+  %\VignetteIndexEntry{Lista de eventos disponíveis no pacote}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

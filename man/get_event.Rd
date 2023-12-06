@@ -17,7 +17,7 @@ Uma lista contendo a página HTML lida e os metadados filtrados para o evento.
 Esta função é usada para leitura do formulário para tabulação de dados
 de evento de saúde do Tabnet, no Datasus. Ela realiza o download do html
 do formulário do Tabnet para que os argumentos sejam validados.
-A lista de eventos é padronizada e pode ser encontrada \href{doc/event_list.html}{neste link}.
+A lista de eventos é padronizada e pode ser encontrada \href{event_list.html}{neste link}.
 }
 \details{
 IMPORTANT:

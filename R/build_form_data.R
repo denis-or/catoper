@@ -43,6 +43,7 @@ build_form_data <- function(args_processados, base_form) {
 
   # Substituir os códigos Unicode, se necessário
   form_data <- gsub("\\\\u00", "%", stringi::stri_escape_unicode(form_data))
+  form_data <- gsub("\\\\\\\\", "%5C", form_data)
 
   show_progress("3. Montando o link", 2)
 

@@ -93,9 +93,7 @@ fetch_data_datasus <- function(form_data, base, linha_argumento) {
   }
 
   # Construir URL completa para o CSV
-  csv_url <- URLencode(paste0("http://tabnet.datasus.gov.br/cgi/", csv_link))
-
-
+  csv_url <- URLencode(paste0(base$pasta_csv, csv_link))
 
   # Ler dados do CSV
   tabela <- tryCatch({

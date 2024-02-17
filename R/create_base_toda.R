@@ -56,7 +56,7 @@ create_base_toda <- function(page_x) {
   base_toda_y <- dplyr::mutate(base_toda_y,
                                label_y = labels_match[match(campo_y, unique(campo_y))])
 
-  base_toda_y <- dplyr::mutate(base_toda_y, dplyr::across(dplyr::where(is.character), ~str_trim(.x)))
+  base_toda_y <- dplyr::mutate(base_toda_y, dplyr::across(dplyr::where(is.character), ~stringr::str_trim(.x)))
 
   show_progress("1. Recriando formul\\u00e1rio", 2)
 

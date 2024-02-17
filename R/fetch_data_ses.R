@@ -42,17 +42,17 @@ fetch_data_datasus <- function(form_data, base, linha_argumento) {
         body = form_data,
         httr::add_headers(
           "Accept" = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-          "Accept-Encoding" = "gzip, deflate"
-          "Accept-Language" = "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7"
-          "Cache-Control" = "max-age=0"
-          "Connection" = "keep-alive"
-          "Content-Length" = "3322"
-          "Content-Type" = "application/x-www-form-urlencoded"
+          "Accept-Encoding" = "gzip, deflate",
+          "Accept-Language" = "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+          "Cache-Control" = "max-age=0",
+          "Connection" = "keep-alive",
+          "Content-Length" = "3322",
+          "Content-Type" = "application/x-www-form-urlencoded",
           #Cookie = "_ga=GA1.4.1388235691.1708197487; _gid=GA1.4.1570611280.1708197487; _ga_FJ1BQMSE04=GS1.4.1708197487.1.1.1708197489.0.0.0"
-          "Host" = "sistemas.saude.rj.gov.br"
-          "Origin" = "http://sistemas.saude.rj.gov.br"
-          "Referer" = base$url_form
-          "Upgrade-Insecure-Requests" = "1"
+          "Host" = "sistemas.saude.rj.gov.br",
+          "Origin" = "http://sistemas.saude.rj.gov.br",
+          "Referer" = base$url_form,
+          "Upgrade-Insecure-Requests" = "1",
           "User-Agent"= "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
         ),
         httr::config(connecttimeout = 10000)

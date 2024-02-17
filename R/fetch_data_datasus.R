@@ -31,6 +31,7 @@
 fetch_data_datasus <- function(form_data, base, linha_argumento) {
 
   show_progress("4. Conectando ...", 2)
+  cat(form_data)
 
   max_tentativas <- 3
   tentativa <- 1

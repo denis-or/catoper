@@ -50,7 +50,7 @@ create_base_toda <- function(page_x) {
   labels_match <- rvest::html_text(rvest::html_elements(page_x, "div label")) |>
     stringr::str_trim() |>
     stringr::str_squish() |>
-    stringr::str_replace_all(pattern = "Ordenar pelos valores da coluna|Exibir linhas zeradas|Formato|Linhas|Colunas|Barras|Setores|Nenhum|Área|Diário|Dispersão", replacement = "") |>
+    stringr::str_replace_all(pattern = "Ordenar pelos valores da coluna|Exibir linhas zeradas|Formato|Linhas|Colunas|Barras|Setores|Nenhum|\u00c1rea|Di\u00e1rio|Dispers\u00e3o", replacement = "") |>
     stringr::str_subset(pattern = "\\S")
 
   base_toda_y <- dplyr::mutate(base_toda_y,

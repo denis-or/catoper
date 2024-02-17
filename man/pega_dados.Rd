@@ -2,7 +2,7 @@
 % Please edit documentation in R/pega_dados.R
 \name{pega_dados}
 \alias{pega_dados}
-\title{Baixar e processar dados do Tabnet do Datasus}
+\title{Baixar e processar dados do Tabnet do Datasus E SES-RJ}
 \usage{
 pega_dados(...)
 }

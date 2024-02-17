@@ -24,7 +24,7 @@
 #' @importFrom dplyr mutate across where
 create_base_toda <- function(page_x) {
 
-  # Extrai informações dos elementos select e option da página
+  # Extrai informacoes dos elementos select e option da pagina
   base_toda_y <- purrr::map_dfr(
     1:length(rvest::html_elements(page_x, "div select") |> rvest::html_attr("name")),
     \(numero) {

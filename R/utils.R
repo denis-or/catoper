@@ -21,7 +21,7 @@
 #' replace_char("Exemplo com # e @.")
 #' }
 replace_char <- function(string) {
-  # Mapeamento de caracteres especiais para seus códigos percentuais
+  # Mapeamento de caracteres especiais para seus codigos percentuais
   caracteres_especiais <-
     c(
       " ",
@@ -69,7 +69,7 @@ replace_char <- function(string) {
       "%5D"
     )
 
-  # Iterar sobre os caracteres especiais e substituí-los
+  # Iterar sobre os caracteres especiais e substitui-los
   for (i in seq_along(caracteres_especiais)) {
     string <- gsub(caracteres_especiais[i], codigos_percentuais[i], string, fixed = TRUE)
   }

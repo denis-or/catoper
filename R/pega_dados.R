@@ -2,7 +2,7 @@
 #' @export
 #'
 #' @title
-#' Baixar e processar dados do Tabnet do Datasus
+#' Baixar e processar dados do Tabnet do Datasus E SES-RJ
 #'
 #' @description
 #' Esta função coordena várias etapas para obter dados. Ela recria o

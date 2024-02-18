@@ -30,8 +30,8 @@
 #' @importFrom utils URLdecode URLencode
 fetch_data_datasus <- function(form_data, base, linha_argumento) {
 
-  show_progress("4. Conectando", 2)
-  cat(form_data)
+  show_progress("4. Processando", 2)
+  # cat(form_data)
 
   max_tentativas <- 3
   tentativa <- 1
@@ -39,7 +39,7 @@ fetch_data_datasus <- function(form_data, base, linha_argumento) {
     tryCatch({
       # Enviar requisição POST
 
-      resposta <- httr2::request(base_meta$url_tbcgi) |>
+      resposta <- httr2::request(base$url_tbcgi) |>
         httr2::req_body_raw(form_data) |>
         httr2::req_headers(
 
@@ -47,8 +47,8 @@ fetch_data_datasus <- function(form_data, base, linha_argumento) {
           `Accept-Encoding` = "gzip, deflate", `Accept-Language` = "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
           `Cache-Control` = "max-age=0", Connection = "keep-alive",
           `Content-Type` = "application/x-www-form-urlencoded",
-          Host = base_meta$host, Origin = base_meta$origin,
-          Referer = base_meta$url_form, `Upgrade-Insecure-Requests` = "1",
+          Host = base$host, Origin = base$origin,
+          Referer = base$url_form, `Upgrade-Insecure-Requests` = "1",
           `User-Agent` = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
         ) |>
         httr2::req_perform()

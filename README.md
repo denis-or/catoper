@@ -49,7 +49,7 @@ tabela_D1 <- pega_dados(
  Linha = "Município",
  Coluna = "Dose",
  Medidas = "Doses_aplicadas",
- "Períodos Disponíveis" = 2023,
+ "Períodos Disponíveis" = 2022,
  "Dose" = "1ª dose",
  "Imunobiológicos" = "Poliomielite inativada (VIP)",
  "Unidade da Federação" = "Rio de Janeiro"

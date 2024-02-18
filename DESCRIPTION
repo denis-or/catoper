@@ -1,10 +1,10 @@
 Package: catoper
-Title: Testes de funções
+Title: Useful scraper for tabulating health data in R
 Version: 0.0.0.9000
 Authors@R: 
     person("Denis", "Rodrigues", , "catoper@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-3748-876X"))
-Description: The catoper is a miscellany of functions useful to myself.
+Description: The catoper is a miscellany of functions useful for tabulating health data in R.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

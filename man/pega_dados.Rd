@@ -9,7 +9,7 @@ pega_dados(...)
 \arguments{
 \item{...}{Argumentos variados que incluem tanto parâmetros para a construção do
 formulário quanto para a filtragem dos dados a serem obtidos.
-O argumento \code{ob} é obrigatório. Contudo, considere utilizar, minimamente
+O argumento \code{ob} é obrigatório. Considere utilizar, minimamente
 os seguintes argumentos:
 - Linha;
 - Coluna;
@@ -45,7 +45,7 @@ tabela_D1 <- pega_dados(
   Linha = "Município",
   Coluna = "Dose",
   Medidas = "Doses_aplicadas",
-  "Períodos Disponíveis" = 2023,
+  "Períodos Disponíveis" = 2022,
   "Dose" = "1ª dose",
   "Imunobiológicos" = "Poliomielite inativada (VIP)",
   "Unidade da Federação" = "Rio de Janeiro"
@@ -53,7 +53,7 @@ tabela_D1 <- pega_dados(
 }
 
 # A tabela_D1 agora contém os dados processados de doses aplicadas de
-# 1ª dose de polio (VIP) em 2023 nos municípios do Rio de Janeiro
+# 1ª dose de polio (VIP) em 2022 nos municípios do Rio de Janeiro
 
 }
 \author{

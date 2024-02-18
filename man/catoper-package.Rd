@@ -4,9 +4,9 @@
 \name{catoper-package}
 \alias{catoper}
 \alias{catoper-package}
-\title{catoper: Testes de funções}
+\title{catoper: Useful scraper for tabulating health data in R}
 \description{
-The catoper is a miscellany of functions useful to myself.
+The catoper is a miscellany of functions useful for tabulating health data in R.
 }
 \seealso{
 Useful links:

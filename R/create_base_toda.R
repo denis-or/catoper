@@ -1,4 +1,4 @@
-# coding: UTF-8
+# coding: latin-1
 #' Recriar Formulário a partir de Página HTML
 #'
 #' Esta função raspa informações de uma página HTML e recria um formulário de dados.
@@ -62,3 +62,5 @@ create_base_toda <- function(page_x) {
 
   return(base_toda_y)
 }
+
+

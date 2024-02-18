@@ -38,27 +38,23 @@ fetch_data_datasus <- function(form_data, base, linha_argumento) {
   while (tentativa <= max_tentativas) {
     tryCatch({
       # Enviar requisição POST
-      response <- httr::POST(
-        url = base$url_tbcgi,
-        body = form_data,
-        httr::add_headers(
-          "Accept" = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-          "Accept-Encoding" = "gzip, deflate",
-          "Accept-Language" = "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
-          "Cache-Control" = "max-age=0",
-          "Connection" = "keep-alive",
-          "Content-Type" = "application/x-www-form-urlencoded",
-          "Host" = base$host,
-          "Origin" = base$origin,
-          "Referer" = base$url_form,
-          "Upgrade-Insecure-Requests" = "1",
-          "User-Agent" = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
-        ),
-        httr::config(connecttimeout = 10000)
-      )
+
+      resposta <- httr2::request(base_meta$url_tbcgi) |>
+        httr2::req_body_raw(form_data) |>
+        httr2::req_headers(
+
+          Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+          `Accept-Encoding` = "gzip, deflate", `Accept-Language` = "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+          `Cache-Control` = "max-age=0", Connection = "keep-alive",
+          `Content-Type` = "application/x-www-form-urlencoded",
+          Host = base_meta$host, Origin = base_meta$origin,
+          Referer = base_meta$url_form, `Upgrade-Insecure-Requests` = "1",
+          `User-Agent` = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+        ) |>
+        httr2::req_perform()
 
       # Verificar se a requisição foi bem-sucedida
-      if (httr::status_code(response) != 200) {
+      if (httr::status_code(resposta) != 200) {
         usethis::ui_stop(paste0("A requisi\\u00e7\\u00e3o POST falhou com o status: ", httr::status_code(response)))
       }
 
@@ -82,8 +78,8 @@ fetch_data_datasus <- function(form_data, base, linha_argumento) {
 
   show_progress("5. Baixando CSV", 2)
   # Extrair o link para o arquivo CSV da resposta
-  csv_link <- response |>
-    httr::content(encoding = "Latin1") |>
+  csv_link <- resposta |>
+    httr2::resp_body_html() |>
     rvest::html_element(xpath = '//*[contains(@href, ".csv" )]') |>
     xml2::xml_attr("href") |>
     URLdecode()

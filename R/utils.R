@@ -1,4 +1,4 @@
-# coding: UTF-8
+# coding: latin-1
 # Funções de utilidade para uso do pacote
 
 
@@ -28,8 +28,8 @@ replace_char <- function(string) {
       "!",
       "#",
       "$",
-      "ª", # "&",
-      "º",
+      "\\u00aa", # "&",
+      "\\u00ba",
       "'",
       "(",
       ")",
@@ -45,6 +45,7 @@ replace_char <- function(string) {
       "[",
       "]"
     )
+
   codigos_percentuais <-
     c(
       "+",
@@ -68,6 +69,7 @@ replace_char <- function(string) {
       "%5B",
       "%5D"
     )
+
 
   # Iterar sobre os caracteres especiais e substitui-los
   for (i in seq_along(caracteres_especiais)) {

@@ -54,7 +54,7 @@ fetch_data_datasus <- function(form_data, base, linha_argumento) {
         httr2::req_perform()
 
       # Verificar se a requisição foi bem-sucedida
-      if (httr::status_code(resposta) != 200) {
+      if (httr2::resp_status(resposta) != 200) {
         usethis::ui_stop(paste0("A requisi\\u00e7\\u00e3o POST falhou com o status: ", httr::status_code(response)))
       }
 

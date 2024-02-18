@@ -38,6 +38,7 @@ devtools::install_github("denis-or/catoper")
 Principal
 
 ``` r
+
 library(catoper)
 
 # Example of data retrieval

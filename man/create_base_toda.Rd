@@ -21,8 +21,6 @@ dataframe e adiciona etiquetas correspondentes a cada campo.
 \examples{
 \dontrun{
 # Exemplo em construção...
-# page_x <- xml2::read_html("http://exemplo.com/pagina")
-# base_toda_y <- create_base_toda(page_x)
 
 }
 }

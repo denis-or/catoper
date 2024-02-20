@@ -19,7 +19,7 @@ A depender de cada evento, esses nomes podem ser alterados e até
 ampliados. Veja o exemplo abaixo.}
 }
 \value{
-Retorna uma \code{tibble} contendo os dados obtidos após processar todas as etapas.
+Retorna um \code{tibble} contendo os dados obtidos após processar todas as etapas.
 }
 \description{
 Esta função coordena várias etapas para obter dados. Ela recria o

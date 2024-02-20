@@ -29,7 +29,7 @@
 #'            ampliados. Veja o exemplo abaixo.
 #'
 #' @return
-#' Retorna uma `tibble` contendo os dados obtidos após processar todas as etapas.
+#' Retorna um `tibble` contendo os dados obtidos após processar todas as etapas.
 #'
 #'
 #'
@@ -62,6 +62,22 @@
 pega_dados <- function(...) {
 
   args <- list(...)
+
+  if (missing(args$ob) || is.null(args$ob)) {
+    usethis::ui_stop("O argumento ob \\\\u00e9 obrigat\\u00f3rio e n\\u00e3o pode ser NULL.")
+  }
+
+  if (!xor(is.null(args[['Medidas']]), is.null(args[['Conteúdo']]))) {
+    usethis::ui_stop("Apenas um dos argumentos Medidas ou Conte\\u00fado deve ser fornecido.")
+  }
+
+  argumentos_obrigatorios <- c("Linha", "Coluna", "Per\\u00edodos dispon\\u00edveis")
+
+  purrr::walk(argumentos_obrigatorios, ~{
+    if (is.null(args[[.x]])) {
+      stop(paste("O argumento", .x, "\\\\u00e9 obrigat\\u00f3rio."))
+    }
+  })
 
   page_ob <- args$ob
   pagina_x <- page_ob[[1]]

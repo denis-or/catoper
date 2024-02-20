@@ -1,7 +1,7 @@
 # coding: UTF-8
-#' Baixar e Processar Dados do Datasus
+#' Baixar e Processar Dados
 #'
-#' Esta função é responsável por fazer uma requisição POST ao Datasus,
+#' Esta função é responsável por fazer uma requisição POST ao site do Tabnet escolhido,
 #' baixar um arquivo CSV e processá-lo. Ela tenta a requisição várias vezes
 #' em caso de timeout e processa o CSV baixado para retornar os dados em um formato
 #' utilizável.
@@ -15,17 +15,13 @@
 #' @examples
 #' \dontrun{
 #' # Exemplo em construção...
-#' # form_data <- "seus_dados_de_formulario"
-#' # base_exemplo <- list(url_tbcgi = "http://exemplo.com", url_form = "http://exemplo.com/form")
-#' # linha_argumento <- "linha_inicial"
-#' # fetch_data_datasus(form_data, base_exemplo, linha_argumento)
 #'
 #' }
-#' @importFrom httr POST add_headers content config
+#' @importFrom httr2 request resp_body_html req_body_raw req_headers req_perform resp_status
 #' @importFrom rvest html_element
 #' @importFrom xml2 xml_attr
 #' @importFrom readr read_csv2
-#' @importFrom janitor clean_names
+#' @importFrom janitor make_clean_names
 #' @importFrom usethis ui_stop ui_info
 #' @importFrom utils URLdecode URLencode
 fetch_data_datasus <- function(form_data, base, linha_argumento) {

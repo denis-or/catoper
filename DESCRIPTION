@@ -29,7 +29,6 @@ Imports:
     rvest,
     stringr,
     stringi,
-    httr,
     janitor,
     cli,
     readr,

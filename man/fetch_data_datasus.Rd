@@ -2,7 +2,7 @@
 % Please edit documentation in R/fetch_data_datasus.R
 \name{fetch_data_datasus}
 \alias{fetch_data_datasus}
-\title{Baixar e Processar Dados do Datasus}
+\title{Baixar e Processar Dados}
 \usage{
 fetch_data_datasus(form_data, base, linha_argumento)
 }
@@ -17,7 +17,7 @@ fetch_data_datasus(form_data, base, linha_argumento)
 Um dataframe contendo os dados processados do CSV.
 }
 \description{
-Esta função é responsável por fazer uma requisição POST ao Datasus,
+Esta função é responsável por fazer uma requisição POST ao site do Tabnet escolhido,
 baixar um arquivo CSV e processá-lo. Ela tenta a requisição várias vezes
 em caso de timeout e processa o CSV baixado para retornar os dados em um formato
 utilizável.
@@ -25,10 +25,6 @@ utilizável.
 \examples{
 \dontrun{
 # Exemplo em construção...
-# form_data <- "seus_dados_de_formulario"
-# base_exemplo <- list(url_tbcgi = "http://exemplo.com", url_form = "http://exemplo.com/form")
-# linha_argumento <- "linha_inicial"
-# fetch_data_datasus(form_data, base_exemplo, linha_argumento)
 
 }
 }

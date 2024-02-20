@@ -25,10 +25,33 @@ Essa função é essencial para uso da função \code{pega_dados()}.
 }
 \examples{
 \dontrun{
-# Exemplo em construção...
-dados_evento <- get_event("Influenza")
 
+# Obter dados para um evento específico
+# Primeiro, obter a página para o evento desejado
+pagina <- get_event("Imunização Doses Aplicadas")
+
+# Em seguida, usar pega_dados para obter a tabela com os parâmetros específicos
+# Observação: os argumentos devem ser idênticos àqueles que estão disponíveis
+# no Tabnet do Datasus. Apenas o argumento `ob` é obrigatório e constante.
+
+tabela_D1 <- pega_dados(
+  ob = pagina,
+  Linha = "Município",
+  Coluna = "Dose",
+  Medidas = "Doses_aplicadas",
+  "Períodos Disponíveis" = 2022,
+  "Dose" = "1ª dose",
+  "Imunobiológicos" = "Poliomielite inativada (VIP)",
+  "Unidade da Federação" = "Rio de Janeiro"
+)
 }
+
+# A tabela_D1 agora contém os dados processados de doses aplicadas de
+# 1ª dose de polio (VIP) em 2022 nos municípios do Rio de Janeiro
+
+
+
+
 }
 \author{
 Denis Rodrigues \email{catoper@gmail.com}

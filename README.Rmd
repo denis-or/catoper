@@ -25,7 +25,7 @@ The `catoper` is a miscellany of functions to facilitate the acquisition, proces
 
 You can install the development version of catoper from [GitHub](https://github.com/) with:
 
-``` r
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
 # install.packages("devtools")
 devtools::install_github("denis-or/catoper")
 ```
@@ -38,10 +38,9 @@ devtools::install_github("denis-or/catoper")
 
 ## Usage
 
-Principal
+Main
 
-``` r
-
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
 library(catoper)
 
 # Example of data retrieval
@@ -60,15 +59,29 @@ tabela_D1 <- pega_dados(
 )
 ```
 
+
 Other use
 
-``` r
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
 # Normality plots
 
 see_normality(rnorm(100, mean = 0, sd = 1), "Example")
 ```
 
 ![](man/figures/figure_1.png)
+
+## Package reach
+
+```{r eval=TRUE, message=FALSE, warning=FALSE, include=TRUE, echo=FALSE}
+
+main_data <- readRDS("R/sysdata.rda")
+
+main_data |> 
+  knitr::kable()
+
+```
+
+
 
 ## License
 

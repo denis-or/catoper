@@ -26,11 +26,19 @@ update_base_readme <- function(){
         rvest::html_text2() |>
         stringr::str_trim()
 
+      if (is.na(titulo)) {
+        titulo <- evento
+      }
+
       fonte <- resposta_n |>
         rvest::html_elements(xpath = '//div[contains(text(), "Fonte:")]') |>
         rvest::html_text2() |>
         stringr::str_replace_all(pattern = "\\r\\n\\r \\r\\t\\r\\r Veja a vers\\u00e3o do Tab para Windows \\\\(TABWIN\\\\)", "") |>
         stringr::str_trim()
+
+      if (is.na(fonte) || length(fonte) == 0) {
+        fonte <- "Fonte: Ministério da Saúde/Secretaria Estadual de Saúde - RJ"
+      }
 
       tabela_ <- data.frame(
         evento = evento,

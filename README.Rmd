@@ -74,10 +74,10 @@ see_normality(rnorm(100, mean = 0, sd = 1), "Example")
 
 ```{r eval=TRUE, message=FALSE, warning=FALSE, include=TRUE, echo=FALSE}
 
-main_data <- readRDS("R/sysdata.rda")
+load("inst/base_readme.rda")
 
-main_data |> 
-  knitr::kable()
+tab_base_readme |> 
+  knitr::kable(col.names = c("Evento","Descrição","Observações"))
 
 ```
 

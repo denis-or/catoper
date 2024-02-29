@@ -63,15 +63,15 @@ pega_dados <- function(...) {
 
   args <- list(...)
 
-  if (missing(args$ob) || is.null(args$ob)) {
-    usethis::ui_stop("O argumento ob \\\\u00e9 obrigat\\u00f3rio e n\\u00e3o pode ser NULL.")
-  }
+  #if (missing(args$ob) || is.null(args$ob)) {
+   # usethis::ui_stop("O argumento ob \\\\u00e9 obrigat\\u00f3rio e n\\u00e3o pode ser NULL.")
+  #}
 
-  if (!xor(is.null(args[['Medidas']]), is.null(args[['Conteúdo']]))) {
-    usethis::ui_stop("Apenas um dos argumentos Medidas ou Conte\\u00fado deve ser fornecido.")
-  }
+  #if (!xor(is.null(args[['Medidas']]), is.null(args[['Conteúdo']]))) {
+  #  usethis::ui_stop("Apenas um dos argumentos Medidas ou Conte\\u00fado deve ser fornecido.")
+  #}
 
-  argumentos_obrigatorios <- c("Linha", "Coluna", "Per\\u00edodos dispon\\u00edveis")
+  argumentos_obrigatorios <- c("Linha", "Coluna")#, "Per\\u00edodos dispon\\u00edveis")
 
   purrr::walk(argumentos_obrigatorios, ~{
     if (is.null(args[[.x]])) {
